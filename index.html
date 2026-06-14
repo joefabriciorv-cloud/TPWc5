@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sublym</title>
+    <title>SUBLYM</title>
     <link rel="stylesheet" href="estilo.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
-
-  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
 
 <header>
     <div class="header-container">
@@ -41,8 +37,8 @@
                     </a>
                 </li>
                 <li id="menu-sesion-item">
-    <button id="btn-abrir-login" style="background:transparent; border:none; cursor:pointer; font-weight:600; text-transform:uppercase; 
-    font-size:0.85rem; font-family: inherit;">Iniciar Sesión</button></li>
+                    <button id="btn-abrir-login" style="background:transparent; border:none; cursor:pointer; font-weight:600; text-transform:uppercase; font-size:0.85rem; font-family: inherit;">Iniciar Sesión</button>
+                </li>
             </ul>
         </nav>
     </div>
@@ -50,10 +46,7 @@
     <div id="barra-busqueda-desplegable" class="search-overlay-bar">
         <div class="search-inner-container">
             <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
-            <input
-                type="text"
-                id="inputBuscador"
-                placeholder="¿Qué estás buscando hoy?...">
+            <input type="text" id="inputBuscador" placeholder="¿Qué estás buscando hoy?...">
             <button id="btn-cerrar-buscador" class="close-search-btn">
                 <i class="fa-solid fa-xmark"></i>
             </button>
@@ -61,90 +54,46 @@
     </div>
 </header>
 
-
 <section class="carrusel-container">
     <div class="carrusel-pista">
-        
         <div class="carrusel-item">
             <picture>
                 <source media="(max-width: 768px)" srcset="Imagenes/carrusel1m.png">
                 <img src="Imagenes/carrusel1.png" alt="Nueva Colección">
             </picture>
         </div>
-        
         <div class="carrusel-item">
             <picture>
                 <source media="(max-width: 768px)" srcset="Imagenes/carrusel2m.png">
                 <img src="Imagenes/carrusel2.png" alt="Descuentos">
             </picture>
         </div>
-        
         <div class="carrusel-item">
             <picture>
                 <source media="(max-width: 768px)" srcset="Imagenes/carrusel3m.png">
                 <img src="Imagenes/carrusel3.png" alt="Promociones">
             </picture>
         </div>
-        
     </div>
-
     <button class="flecha anterior">&#10094;</button>
     <button class="flecha siguiente">&#10095;</button>
 </section>
 
-
 <main>
-
-   
     <section class="hero">
         <div class="hero-contenido">
             <h2 class="hero-titulo">NUEVA COLECCIÓN 2026</h2>
             <p class="hero-subtitulo">Hasta 40% de descuento en línea</p>
-            <a href="categorias.html" class="hero-boton">
-                COMPRAR AHORA
-            </a>
+            <a href="categorias.html" class="hero-boton">COMPRAR AHORA</a>
         </div>
     </section>
 
-   
     <h2 class="titulo-seccion">TENDENCIAS DE HOY</h2>
-
-    <section id="catalogo">
-        <article>
-            <img src="Imagenes/vestidosc.png" alt="Vestido">
-            <h3>Vestido Oscuro</h3>
-            <p class="precio">S/ 59.90</p>
-            <button class="btn-agregar" data-id="p1" data-nombre="Vestido Oscuro" data-precio="59.90" data-img="Imagenes/vestidosc.png">Añadir al carrito</button>
-</article>
-
-        <article>
-            <img src="Imagenes/eleganpi.png" alt="Camisa">
-            <h3>Camisa Eleganpi</h3>
-            <p class="precio">S/ 35.00</p>
-            <button class="btn-agregar" data-id="p2" data-nombre="Camisa Eleganpi" data-precio="35.00" data-img="Imagenes/eleganpi.png">Añadir al carrito</button>
-        </article>
-
-        <article>
-            <img src="Imagenes/chaqueta.png" alt="Chaqueta">
-            <h3>Chaqueta Minimal</h3>
-            <p class="precio">S/ 89.00</p>
-            <button class="btn-agregar" data-id="p3" data-nombre="Chaqueta Minimal" data-precio="89.00" data-img="Imagenes/chaqueta.png">Añadir al carrito</button>
-        </article>
-
-        <article>
-            <img src="Imagenes/conjuntourb.avif" alt="Conjunto">
-            <h3>Conjunto Urbano</h3>
-            <p class="precio">S/ 45.50</p>
-            <button class="btn-agregar" data-id="p4" data-nombre="Conjunto Urbano" data-precio="45.50" data-img="Imagenes/conjuntourb.avif">Añadir al carrito</button>
-        </article>
-    </section>
-
+    <section id="catalogo"></section>
 </main>
-
 
 <footer>
     <div class="footer-container">
-
         <div class="footer-col">
             <h4>TE AYUDAMOS</h4>
             <ul>
@@ -154,7 +103,6 @@
                 <li><a href="#">Boletas y facturas</a></li>
             </ul>
         </div>
-
         <div class="footer-col">
             <h4>SOBRE NOSOTROS</h4>
             <ul>
@@ -162,7 +110,6 @@
                 <li><a href="#">Sustentabilidad</a></li>
             </ul>
         </div>
-
         <div class="footer-col">
             <h4>PROGRAMAS</h4>
             <ul>
@@ -171,7 +118,6 @@
                 <li><a href="#">Cyber WOW 2026</a></li>
             </ul>
         </div>
-
         <div class="footer-col">
             <h4>LEGAL</h4>
             <ul>
@@ -179,25 +125,21 @@
                 <li><a href="#">Política de cookies</a></li>
                 <li><a href="#">Privacidad</a></li>
             </ul>
-
             <div class="redes-sociales">
                 <span>FB</span> | <span>IG</span> | <span>TK</span>
             </div>
         </div>
-
     </div>
-
     <div class="footer-bottom">
         <p>&copy; 2026 SUBLYM S.A.C. Todos los derechos reservados.</p>
         <p>Sector San José, Ica, Perú</p>
     </div>
 </footer>
+
 <div id="modal-login" class="modal-overlay">
     <div class="modal-content">
         <button id="btn-cerrar-modal" class="close-modal-btn">&times;</button>
-        
         <h2>SUBLYM</h2>
-        
         <form id="form-login-modal">
             <div style="margin-bottom: 15px; text-align: left;">
                 <label style="display:block; margin-bottom:5px; font-weight:600; font-size:0.85rem;">Usuario</label>
@@ -207,19 +149,15 @@
                 <label style="display:block; margin-bottom:5px; font-weight:600; font-size:0.85rem;">Contraseña</label>
                 <input type="password" id="modal-password" placeholder="contraseña" required>
             </div>
-            
             <button type="submit" class="btn-ingresar-premium">INGRESAR</button>
-            
             <p class="texto-registro-modal">
                 ¿No tienes una cuenta? <a href="#" id="link-registrar-simulado" onclick="alert('Todavia no hay eso :V')">Regístrate</a>
             </p>
         </form>
-        
         <p id="modal-error-login" style="color: #ef4444; font-size: 0.85rem; margin-top: 15px; display: none;">Credenciales incorrectas.</p>
     </div>
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
