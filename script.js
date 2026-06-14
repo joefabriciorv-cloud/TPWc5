@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
             
             document.getElementById('btn-logout').addEventListener('click', function() {
                 localStorage.removeItem('user_role');
-                localStorage.removeItem('productos_tienda'); 
-                window.location.reload(); 
+                localStorage.removeItem('productos_tienda');
+                window.location.reload();
             });
         } else {
             contenedorSesion.innerHTML = `
@@ -52,11 +52,11 @@ document.addEventListener("DOMContentLoaded", function() {
             if (user === 'admin' && pass === 'admin123') {
                 localStorage.setItem('user_role', 'admin');
                 document.getElementById('modal-login').classList.remove('activo');
-                window.location.reload(); 
+                window.location.reload();
             } else if (user === 'cliente' && pass === 'cliente123') {
                 localStorage.setItem('user_role', 'cliente');
                 document.getElementById('modal-login').classList.remove('activo');
-                window.location.reload(); 
+                window.location.reload();
             } else {
                 errorTxt.style.display = 'block';
             }
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // ==========================================
-    // 1. DINAMISMO DEL CATÁLOGOS Y PRECIOS EDITABLES
+    // 1. DINAMISMO DEL CATÁLOGO Y PRECIOS EDITABLES
     // ==========================================
     const productosIniciales = [
         { id: "p1", nombre: "Vestido Oscuro", precio: 59.90, img: "Imagenes/vestidosc.png" },
@@ -85,14 +85,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function pintarProductosDinamicos() {
         const contenedor = document.getElementById('catalogo');
-        if (!contenedor) return; 
+        if (!contenedor) return;
 
         contenedor.innerHTML = '';
 
         listaProductos.forEach(prod => {
             const article = document.createElement('article');
             
-            // Renderizado condicional del precio: Si es admin ve controles de precio, si no, ve texto estático
             let bloquePrecio = '';
             let bloqueBotonesAdmin = '';
 
@@ -126,7 +125,6 @@ document.addEventListener("DOMContentLoaded", function() {
         asociarEventosBotones();
     }
 
-    // ADAPTADOR PARA LAS SUBPÁGINAS ESTÁTICAS (Hombres, Mujeres, etc.)
     function adaptarPaginasEstaticas() {
         if (rolUsuario === 'admin') {
             const productosEstaticos = document.querySelectorAll('article');
@@ -136,9 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const elementoPrecio = producto.querySelector('.precio');
                 
                 let precioActual = elementoPrecio ? parseFloat(elementoPrecio.innerText.replace('S/', '').trim()) : 0;
-                const idSimulado = 'estatico_' + index;
 
-                // 1. Convertir el precio de la página en un control editable
                 if (elementoPrecio) {
                     elementoPrecio.innerHTML = `
                         <div style="margin: 10px 0; display: flex; flex-direction: column; gap: 5px; text-align:center;">
@@ -148,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     `;
                 }
 
-                // 2. Reemplazar el botón de compra por el panel administrativo de acciones
                 if (botonOriginal) {
                     const contenedorAcciones = document.createElement('div');
                     contenedorAcciones.style.cssText = "display:flex; flex-direction:column; gap:5px; width:100%; margin-top:auto;";
@@ -158,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function() {
                         <button class="btn-eliminar-estatico" style="background: #ef4444; color: white; border: none; padding: 10px; font-weight: bold; cursor: pointer;">❌ Eliminar Artículo</button>
                     `;
 
-                    // Lógica para el botón Descuento en páginas estáticas
                     contenedorAcciones.querySelector('.btn-desc-estatico').addEventListener('click', () => {
                         const inputPrecio = producto.querySelector('.input-precio-estatico');
                         let precioBase = parseFloat(inputPrecio.value);
@@ -170,7 +164,6 @@ document.addEventListener("DOMContentLoaded", function() {
                         }
                     });
 
-                    // Lógica para eliminar la tarjeta en páginas estáticas
                     contenedorAcciones.querySelector('.btn-eliminar-estatico').addEventListener('click', () => {
                         producto.remove();
                     });
@@ -209,17 +202,17 @@ document.addEventListener("DOMContentLoaded", function() {
     if (buscador) {
         buscador.addEventListener('input', () => {
             const textoUsuario = buscador.value.toLowerCase().trim();
-            const tarjetasProductos = document.querySelectorAll('#catalogo article, article');
+            const tarjetasProductos = document.querySelectorAll('#catalogo article, .catalogo article');
 
             tarjetasProductos.forEach(producto => {
                 const h3 = producto.querySelector('h3');
-                if (h3) {
-                    const nombreProducto = h3.innerText.toLowerCase();
-                    if (nombreProducto.includes(textoUsuario)) {
-                        producto.style.display = "flex";
-                    } else {
-                        producto.style.display = "none";
-                    }
+                if (!h3) return; 
+
+                const nombreProducto = h3.innerText.toLowerCase();
+                if (nombreProducto.includes(textoUsuario)) {
+                    producto.style.display = "flex";
+                } else {
+                    producto.style.display = "none";
                 }
             });
         });
@@ -240,7 +233,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function asociarEventosBotones() {
-        // --- EVENTOS CLIENTE: AGREGAR AL CARRITO ---
         const botonesAgregar = document.querySelectorAll('.btn-agregar');
         botonesAgregar.forEach(boton => { boton.replaceWith(boton.cloneNode(true)); });
         
@@ -268,7 +260,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
 
-        // --- EVENTOS ADMINISTRADOR: CAMBIAR PRECIOS EN TIEMPO REAL (INPUTS) ---
         const inputsPrecioAdmin = document.querySelectorAll('.input-precio-admin');
         inputsPrecioAdmin.forEach(input => {
             input.addEventListener('change', (e) => {
@@ -285,7 +276,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
 
-        // --- EVENTOS ADMINISTRADOR: APLICAR DESCUENTOS PORCENTUALES ---
         const botonesDescuentoAdmin = document.querySelectorAll('.btn-descuento-admin');
         botonesDescuentoAdmin.forEach(boton => {
             boton.addEventListener('click', (e) => {
@@ -297,14 +287,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (porcentaje !== null && !isNaN(porcentaje) && porcentaje > 0) {
                         producto.precio = producto.precio - (producto.precio * (parseFloat(porcentaje) / 100));
                         localStorage.setItem('productos_tienda', JSON.stringify(listaProductos));
-                        pintarProductosDinamicos(); // Refresca interfaz
+                        pintarProductosDinamicos();
                         alert("Descuento aplicado con éxito.");
                     }
                 }
             });
         });
 
-        // --- EVENTOS ADMINISTRADOR: ELIMINAR DEL CATÁLOGO ---
         const botonesEliminarAdmin = document.querySelectorAll('.btn-eliminar-admin');
         botonesEliminarAdmin.forEach(boton => {
             boton.addEventListener('click', (e) => {
@@ -325,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const costoEnvio = 15.00;
 
     function renderizarCarrito() {
-        if (!contenedorItems) return; 
+        if (!contenedorItems) return;
         contenedorItems.innerHTML = '';
 
         if (carrito.length === 0) {
@@ -403,4 +392,46 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     renderizarCarrito();
+
+
+    // ==========================================
+    // 5. CONTROL DEL CARRUSEL DE IMÁGENES (SOPORTE .CARRUSEL-PISTA)
+    // ==========================================
+    const carruselContainer = document.querySelector('.carrusel-pista'); 
+    const imagenesCarrusel = document.querySelectorAll('.carrusel-item img');
+    const btnAnterior = document.querySelector('.flecha.anterior');
+    const btnSiguiente = document.querySelector('.flecha.siguiente');
+
+    let indiceActual = 0;
+
+    if (carruselContainer && imagenesCarrusel.length > 0 && btnAnterior && btnSiguiente) {
+        
+        function actualizarCarrusel() {
+            const desplazamiento = indiceActual * -100;
+            carruselContainer.style.transform = `translateX(${desplazamiento}%)`;
+            carruselContainer.style.transition = "transform 0.5s ease-in-out";
+        }
+
+        btnSiguiente.addEventListener('click', () => {
+            indiceActual++;
+            if (indiceActual >= imagenesCarrusel.length) {
+                indiceActual = 0; 
+            }
+            actualizarCarrusel();
+        });
+
+        btnAnterior.addEventListener('click', () => {
+            indiceActual--;
+            if (indiceActual < 0) {
+                indiceActual = imagenesCarrusel.length - 1; 
+            }
+            actualizarCarrusel();
+        });
+
+        // Desplazamiento automático cada 5 segundos
+        setInterval(() => {
+            btnSiguiente.click();
+        }, 5000);
+    }
+
 });
