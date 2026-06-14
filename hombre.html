@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hombre | SUBLYM</title>
+    <link rel="stylesheet" href="estilo.css">
+
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo-link">
+            <h1>SUBLYM</h1>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html">Catálogo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+
+                <li class="nav-accion-item">
+                    <button id="btn-abrir-buscador" class="icon-btn" aria-label="Buscar en colección hombre">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </li>
+
+                <li>
+                    <a href="carrito.html" class="nav-carrito">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+                <li id="menu-sesion-item">
+    <button id="btn-abrir-login" style="background:transparent; border:none; cursor:pointer; font-weight:600; text-transform:uppercase; 
+    font-size:0.85rem; font-family: inherit;">Iniciar Sesión</button>
+</li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="barra-busqueda-desplegable" class="search-overlay-bar">
+        <div class="search-inner-container">
+            <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
+            <input
+                type="text"
+                id="inputBuscador"
+                placeholder="Buscar en colección hombre...">
+            <button id="btn-cerrar-buscador" class="close-search-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+<div class="menu-temporadas">
+    <a href="#Destacados">Destacados</a>
+    <a href="#Verano">Verano</a>
+    <a href="#Invierno">Invierno</a>
+    <a href="#Otoño">Otoño</a>
+    <a href="#Primavera">Primavera</a>
+</div>
+
+<main>
+
+    <section id="Destacados" class="animar-entrada">
+        <h2 class="titulo-seccion-catalogo">Los Más Vendidos</h2>
+
+        <div class="catalogo-grid">
+            <article>
+                <img src="Imagenes/hombre1.webp" alt="Casaca Eleganpi">
+                <h3>Casaca Eleganpi</h3>
+                <p class="precio">S/ 259.90</p>
+                <button class="btn-agregar" data-id="h1" data-nombre="Casaca Eleganpi" data-precio="259.90" data-img="Imagenes/hombre1.webp">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/hombre2.webp" alt="Mangalarga Negro">
+                <h3>Mangalarga Negro</h3>
+                <p class="precio">S/ 89.90</p>
+                <button class="btn-agregar" data-id="h2" data-nombre="Mangalarga Negro" data-precio="89.90" data-img="Imagenes/hombre2.webp">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/hombre3.webp" alt="Camisa Cuadros">
+                <h3>Camisa Cuadros</h3>
+                <p class="precio">S/ 109.00</p>
+                <button class="btn-agregar" data-id="h3" data-nombre="Camisa Cuadros" data-precio="109.00" data-img="Imagenes/hombre3.webp">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/hombre4.webp" alt="Suéter Negro">
+                <h3>Suéter Negro</h3>
+                <p class="precio">S/ 349.00</p>
+                <button class="btn-agregar" data-id="h4" data-nombre="Suéter Negro" data-precio="349.00" data-img="Imagenes/hombre4.webp">Añadir al carrito</button>
+            </article>
+        </div>
+    </section>
+
+    <section id="Verano">
+        <h2 class="titulo-seccion-catalogo">Colección Verano</h2>
+
+        <div class="catalogo-grid">
+            <article>
+                <img src="Imagenes/hombre5.avif" alt="Conjunto Verano">
+                <h3>Conjunto Verano</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="h5" data-nombre="Conjunto Verano" data-precio="23.45" data-img="Imagenes/hombre5.avif">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/hombre7.webp" alt="Short Verano">
+                <h3>Short Verano</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="h6" data-nombre="Short Verano" data-precio="23.45" data-img="Imagenes/hombre7.webp">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/hombre6.jpg" alt="Camisa Hawaiana">
+                <h3>Camisa Hawaiana</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="h7" data-nombre="Camisa Hawaiana" data-precio="23.45" data-img="Imagenes/hombre6.jpg">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/hombre8.png" alt="Conjunto de Playa">
+                <h3>Conjunto de Playa</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="h8" data-nombre="Conjunto de Playa" data-precio="23.45" data-img="Imagenes/hombre8.png">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/hombre9.webp" alt="Short de Mar">
+                <h3>Short de Mar</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="h9" data-nombre="Short de Mar" data-precio="23.45" data-img="Imagenes/hombre9.webp">Añadir al carrito</button>
+            </article>
+        </div>
+    </section>
+
+    <section id="Invierno" class="seccion-invierno">
+        <h2 class="titulo-seccion-catalogo">Colección Invierno</h2>
+
+        <div class="catalogo-grid">
+            <article>
+                <img src="Imagenes/InvieConjunto.jpg" alt="Conjunto Invierno">
+                <h3>Conjunto Invierno</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="h10" data-nombre="Conjunto Invierno" data-precio="23.45" data-img="Imagenes/InvieConjunto.jpg">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/InviCasacBlanca.jpg" alt="Casaca Blanca">
+                <h3>Casaca Blanca</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="h11" data-nombre="Casaca Blanca" data-precio="23.45" data-img="Imagenes/InviCasacBlanca.jpg">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/InvieCasacaAnchaVerde.jpg" alt="Casaca Verde">
+                <h3>Casaca Verde</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="h12" data-nombre="Casaca Verde" data-precio="23.45" data-img="Imagenes/InvieCasacaAnchaVerde.jpg">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/InvieCascaRoja.jpg" alt="Casaca Roja">
+                <h3>Casaca Roja</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="h13" data-nombre="Casaca Roja" data-precio="23.45" data-img="Imagenes/InvieCascaRoja.jpg">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/InvieCuelloTor.jpg" alt="Cuello Tortuga">
+                <h3>Cuello Tortuga</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="h14" data-nombre="Cuello Tortuga" data-precio="23.45" data-img="Imagenes/InvieCuelloTor.jpg">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/InvieMarroElega.jpg" alt="Abrigo Elegante">
+                <h3>Abrigo Elegante</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="h15" data-nombre="Abrigo Elegante" data-precio="23.45" data-img="Imagenes/InvieMarroElega.jpg">Añadir al carrito</button>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>TE AYUDAMOS</h4>
+            <ul>
+                <li><a href="#">Centro de ayuda</a></li>
+                <li><a href="#">Cambios y devoluciones</a></li>
+                <li><a href="#">Seguimiento de mi orden</a></li>
+                <li><a href="#">Boletas y facturas</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>SOBRE NOSOTROS</h4>
+            <ul>
+                <li><a href="#">Quiénes Somos</a></li>
+                <li><a href="#">Sustentabilidad</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>PROGRAMAS</h4>
+            <ul>
+                <li><a href="#">Historias Sublym</a></li>
+                <li><a href="#">Puntos Sublym (Sublines)</a></li>
+                <li><a href="#">Cyber WOW 2026</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>LEGAL</h4>
+            <ul>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Política de cookies</a></li>
+                <li><a href="#">Privacidad</a></li>
+            </ul>
+
+            <div class="redes-sociales">
+                <span>FB</span> | <span>IG</span> | <span>TK</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 SUBLYM S.A.C. Todos los derechos reservados.</p>
+        <p>Sector San José, Ica, Perú</p>
+    </div>
+</footer>
+<div id="modal-login" class="modal-overlay">
+    <div class="modal-content">
+        <button id="btn-cerrar-modal" class="close-modal-btn">&times;</button>
+        
+        <h2>SUBLYM</h2>
+        
+        <form id="form-login-modal">
+            <div style="margin-bottom: 15px; text-align: left;">
+                <label style="display:block; margin-bottom:5px; font-weight:600; font-size:0.85rem;">Usuario</label>
+                <input type="text" id="modal-username" placeholder="correo" required>
+            </div>
+            <div style="margin-bottom: 20px; text-align: left;">
+                <label style="display:block; margin-bottom:5px; font-weight:600; font-size:0.85rem;">Contraseña</label>
+                <input type="password" id="modal-password" placeholder="contraseña" required>
+            </div>
+            
+            <button type="submit" class="btn-ingresar-premium">INGRESAR</button>
+            
+            <p class="texto-registro-modal">
+                ¿No tienes una cuenta? <a href="#" id="link-registrar-simulado" onclick="alert('Todavia no hay eso :V')">Regístrate</a>
+            </p>
+        </form>
+        
+        <p id="modal-error-login" style="color: #ef4444; font-size: 0.85rem; margin-top: 15px; display: none;">Credenciales incorrectas.</p>
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

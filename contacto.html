@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos | SUBLYM</title>
+    <link rel="stylesheet" href="estilo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo-link">
+            <h1>SUBLYM</h1>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html">Catálogo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+
+                <li class="nav-accion-item">
+                    <button id="btn-abrir-buscador" class="icon-btn" aria-label="Buscar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </li>
+
+                <li>
+                    <a href="carrito.html" class="nav-carrito">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+                 <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div id="barra-busqueda-desplegable" class="search-overlay-bar">
+        <div class="search-inner-container">
+            <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
+            <input
+                type="text"
+                id="inputBuscador"
+                placeholder="¿Qué estás buscando hoy?...">
+            <button id="btn-cerrar-buscador" class="close-search-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+<main class="main-contacto">
+    <section class="contacto-container">
+        <h2>Escríbenos</h2>
+
+        <p class="contacto-descripcion">
+            ¿Tienes alguna duda sobre nuestras prendas? Estamos para ayudarte.
+        </p>
+
+        <form action="#">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Tu nombre..."
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Tu correo..."
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea
+                    id="mensaje"
+                    rows="5"
+                    placeholder="¿En qué podemos ayudarte?"></textarea>
+            </div>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+
+        <div class="info-tienda">
+            <div>
+                <h4>Ubicación</h4>
+                <p>Sector San José, Ica, Perú</p>
+            </div>
+
+            <div>
+                <h4>Horario</h4>
+                <p>Lun - Sáb: 9:00 AM - 8:00 PM</p>
+            </div>
+
+            <div>
+                <h4>Teléfono</h4>
+                <p>+51 987 654 321</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>TE AYUDAMOS</h4>
+            <ul>
+                <li><a href="#">Centro de ayuda</a></li>
+                <li><a href="#">Cambios y devoluciones</a></li>
+                <li><a href="#">Seguimiento de mi orden</a></li>
+                <li><a href="#">Boletas y facturas</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>SOBRE NOSOTROS</h4>
+            <ul>
+                <li><a href="#">Quiénes Somos</a></li>
+                <li><a href="#">Sustentabilidad</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>PROGRAMAS</h4>
+            <ul>
+                <li><a href="#">Historias Sublym</a></li>
+                <li><a href="#">Puntos Sublym (Sublines)</a></li>
+                <li><a href="#">Cyber WOW 2026</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>LEGAL</h4>
+            <ul>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Política de cookies</a></li>
+                <li><a href="#">Privacidad</a></li>
+            </ul>
+
+            <div class="redes-sociales">
+                <span>FB</span> | <span>IG</span> | <span>TK</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 SUBLYM S.A.C. Todos los derechos reservados.</p>
+        <p>Sector San José, Ica, Perú</p>
+    </div>
+</footer>
+<div id="modal-login" class="modal-overlay">
+    <div class="modal-content">
+        <button id="btn-cerrar-modal" class="close-modal-btn">&times;</button>
+        
+        <h2>SUBLYM</h2>
+        
+        <form id="form-login-modal">
+            <div style="margin-bottom: 15px; text-align: left;">
+                <label style="display:block; margin-bottom:5px; font-weight:600; font-size:0.85rem;">Usuario</label>
+                <input type="text" id="modal-username" placeholder="correo" required>
+            </div>
+            <div style="margin-bottom: 20px; text-align: left;">
+                <label style="display:block; margin-bottom:5px; font-weight:600; font-size:0.85rem;">Contraseña</label>
+                <input type="password" id="modal-password" placeholder="contraseña" required>
+            </div>
+            
+            <button type="submit" class="btn-ingresar-premium">INGRESAR</button>
+            
+            <p class="texto-registro-modal">
+                ¿No tienes una cuenta? <a href="#" id="link-registrar-simulado" onclick="alert('Todavia no hay eso :V')">Regístrate</a>
+            </p>
+        </form>
+        
+        <p id="modal-error-login" style="color: #ef4444; font-size: 0.85rem; margin-top: 15px; display: none;">Credenciales incorrectas.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

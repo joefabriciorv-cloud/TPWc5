@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mujer | SUBLYM</title>
+    <link rel="stylesheet" href="estilo.css">
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo-link">
+            <h1>SUBLYM</h1>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="categorias.html">Catálogo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+
+                <li class="nav-accion-item">
+                    <button id="btn-abrir-buscador" class="icon-btn" aria-label="Buscar en colección mujer">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </li>
+
+                <li>
+                    <a href="carrito.html" class="nav-carrito">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+                <li id="menu-sesion-item">
+    <button id="btn-abrir-login" style="background:transparent; border:none; cursor:pointer; font-weight:600; text-transform:uppercase; 
+    font-size:0.85rem; font-family: inherit;">Iniciar Sesión</button>
+</li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div id="barra-busqueda-desplegable" class="search-overlay-bar">
+        <div class="search-inner-container">
+            <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
+            <input
+                type="text"
+                id="inputBuscador"
+                placeholder="Buscar en colección mujer...">
+            <button id="btn-cerrar-buscador" class="close-search-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+<div class="menu-temporadas">
+    <a href="#DestacadosMujer">Destacados</a>
+    <a href="#MujerVerano">Verano</a>
+    <a href="#MujerInvierno">Invierno</a>
+    <a href="#MujerOtoño">Otoño</a>
+    <a href="#MujerPrimavera">Primavera</a>
+    <a href="#MujerAccesorios">Accesorios</a>
+</div>
+
+<main>
+
+    <section id="DestacadosMujer" class="animar-entrada">
+        <h2 class="titulo-seccion-catalogo">DESTACADOS</h2>
+
+        <div class="catalogo-grid">
+            <article>
+                <img src="Imagenes/mujer1.webp" alt="Conjunto elegante">
+                <h3>Conjunto elegante</h3>
+                <p class="precio">S/ 229.90</p>
+                <button class="btn-agregar" data-id="m1" data-nombre="Conjunto elegante" data-precio="229.90" data-img="Imagenes/mujer1.webp">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/mujer2.webp" alt="Blusa con volantes">
+                <h3>Blusa con volantes</h3>
+                <p class="precio">S/ 125.95</p>
+                <button class="btn-agregar" data-id="m2" data-nombre="Blusa con volantes" data-precio="125.95" data-img="Imagenes/mujer2.webp">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/mujer3.webp" alt="Blazer Corto">
+                <h3>Blazer Corto</h3>
+                <p class="precio">S/ 139.50</p>
+                <button class="btn-agregar" data-id="m3" data-nombre="Blazer Corto" data-precio="139.50" data-img="Imagenes/mujer3.webp">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/mujer4.webp" alt="Sudadera estampada">
+                <h3>Sudadera estampada</h3>
+                <p class="precio">S/ 109.50</p>
+                <button class="btn-agregar" data-id="m4" data-nombre="Sudadera estampada" data-precio="109.50" data-img="Imagenes/mujer4.webp">Añadir al carrito</button>
+            </article>
+        </div>
+    </section>
+
+    <section id="MujerVerano">
+        <h2 class="titulo-seccion-catalogo">Verano Mujer</h2>
+
+        <div class="catalogo-grid">
+            <article>
+                <img src="Imagenes/mujer3.webp" alt="Top Veraniego">
+                <h3>Top Veraniego</h3>
+                <p class="precio">S/ 29.00</p>
+                <button class="btn-agregar" data-id="m5" data-nombre="Top Veraniego" data-precio="29.00" data-img="Imagenes/mujer3.webp">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/jeanMujer.jpg" alt="Jean Mujer">
+                <h3>Jean Mujer</h3>
+                <p class="precio">S/ 35.00</p>
+                <button class="btn-agregar" data-id="m6" data-nombre="Jean Mujer" data-precio="35.00" data-img="Imagenes/jeanMujer.jpg">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/shopping (1).webp" alt="Falda Larga">
+                <h3>Falda Larga</h3>
+                <p class="precio">S/ 39.50</p>
+                <button class="btn-agregar" data-id="m7" data-nombre="Falda Larga" data-precio="39.50" data-img="Imagenes/shopping (1).webp">Añadir al carrito</button>
+            </article>
+        </div>
+    </section>
+
+    <section id="MujerInvierno" class="seccion-invierno">
+        <h2 class="titulo-seccion-catalogo">Invierno Mujer</h2>
+
+        <div class="catalogo-grid">
+            <article>
+                <img src="Imagenes/mujer5.jpg" alt="Conjunto Invierno">
+                <h3>Conjunto Invierno</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="m8" data-nombre="Conjunto Invierno" data-precio="23.45" data-img="Imagenes/mujer5.jpg">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/mujer6.jpg" alt="Casaca Blanca">
+                <h3>Casaca Blanca</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="m9" data-nombre="Casaca Blanca" data-precio="23.45" data-img="Imagenes/mujer6.jpg">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/mujer7.webp" alt="Casaca Verde">
+                <h3>Casaca Verde</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="m10" data-nombre="Casaca Verde" data-precio="23.45" data-img="Imagenes/mujer7.webp">Añadir al carrito</button>
+            </article>
+
+            <article>
+                <img src="Imagenes/mujer8.webp" alt="Casaca Roja">
+                <h3>Casaca Roja</h3>
+                <p class="precio">S/ 23.45</p>
+                <button class="btn-agregar" data-id="m11" data-nombre="Casaca Roja" data-precio="23.45" data-img="Imagenes/mujer8.webp">Añadir al carrito</button>
+            </article>
+        </div>
+    </section>
+
+</main>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>TE AYUDAMOS</h4>
+            <ul>
+                <li><a href="#">Centro de ayuda</a></li>
+                <li><a href="#">Cambios y devoluciones</a></li>
+                <li><a href="#">Seguimiento de mi orden</a></li>
+                <li><a href="#">Boletas y facturas</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>SOBRE NOSOTROS</h4>
+            <ul>
+                <li><a href="#">Quiénes Somos</a></li>
+                <li><a href="#">Sustentabilidad</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>PROGRAMAS</h4>
+            <ul>
+                <li><a href="#">Historias Sublym</a></li>
+                <li><a href="#">Puntos Sublym (Sublines)</a></li>
+                <li><a href="#">Cyber WOW 2026</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>LEGAL</h4>
+            <ul>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Política de cookies</a></li>
+                <li><a href="#">Privacidad</a></li>
+            </ul>
+
+            <div class="redes-sociales">
+                <span>FB</span> | <span>IG</span> | <span>TK</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 SUBLYM S.A.C. Todos los derechos reservados.</p>
+        <p>Sector San José, Ica, Perú</p>
+    </div>
+</footer>
+<div id="modal-login" class="modal-overlay">
+    <div class="modal-content">
+        <button id="btn-cerrar-modal" class="close-modal-btn">&times;</button>
+        
+        <h2>SUBLYM</h2>
+        
+        <form id="form-login-modal">
+            <div style="margin-bottom: 15px; text-align: left;">
+                <label style="display:block; margin-bottom:5px; font-weight:600; font-size:0.85rem;">Usuario</label>
+                <input type="text" id="modal-username" placeholder="correo" required>
+            </div>
+            <div style="margin-bottom: 20px; text-align: left;">
+                <label style="display:block; margin-bottom:5px; font-weight:600; font-size:0.85rem;">Contraseña</label>
+                <input type="password" id="modal-password" placeholder="contraseña" required>
+            </div>
+            
+            <button type="submit" class="btn-ingresar-premium">INGRESAR</button>
+            
+            <p class="texto-registro-modal">
+                ¿No tienes una cuenta? <a href="#" id="link-registrar-simulado" onclick="alert('Todavia no hay eso :V')">Regístrate</a>
+            </p>
+        </form>
+        
+        <p id="modal-error-login" style="color: #ef4444; font-size: 0.85rem; margin-top: 15px; display: none;">Credenciales incorrectas.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
