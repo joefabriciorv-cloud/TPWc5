@@ -1,163 +1,189 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUBLYM</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Sublym</title>
+    <link rel="stylesheet" th:href="@{/index.css}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-<header>
-    <div class="header-container">
-        <a href="index.html" class="logo-link">
-            <h1>SUBLYM</h1>
-        </a>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="categorias.html">Catálogo</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                
-                <li class="nav-accion-item">
-                    <button id="btn-abrir-buscador" class="icon-btn" aria-label="Buscar">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </li>
-
-                <li>
-                    <a href="carrito.html" class="nav-carrito">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        <span id="cart-count">0</span>
-                    </a>
-                </li>
-                <li id="menu-sesion-item">
-                    <button id="btn-abrir-login" style="background:transparent; border:none; cursor:pointer; font-weight:600; text-transform:uppercase; font-size:0.85rem; font-family: inherit;">Iniciar Sesión</button>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-    <div id="barra-busqueda-desplegable" class="search-overlay-bar">
-        <div class="search-inner-container">
-            <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
-            <input type="text" id="inputBuscador" placeholder="¿Qué estás buscando hoy?...">
-            <button id="btn-cerrar-buscador" class="close-search-btn">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
+    <header>
+        <div class="header-container">
+            <a th:href="@{/}" class="logo-link">
+                <h1>SUBLYM</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a th:href="@{/}">Inicio</a></li>
+                    <li><a href="#">Catálogo</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li class="nav-accion-item">
+                        <button id="btn-abrir-buscador" class="icon-btn" aria-label="Buscar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </td>
+                    <li>
+                        <a href="#" class="nav-carrito">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span id="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li id="menu-sesion-item">
+                        <button id="btn-abrir-login" style="background:transparent; border:none; cursor:pointer; font-weight:600; text-transform:uppercase; font-size:0.85rem; font-family: inherit;">Iniciar Sesión</button>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </div>
-</header>
+        <div id="barra-busqueda-desplegable" class="search-overlay-bar">
+            <div class="search-inner-container">
+                <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
+                <input type="text" id="inputBuscador" placeholder="¿Qué estás buscando hoy?...">
+                <button id="btn-cerrar-buscador" class="close-search-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </header>
 
-<section class="carrusel-container">
-    <div class="carrusel-pista">
-        <div class="carrusel-item">
-            <picture>
-                <source media="(max-width: 768px)" srcset="Imagenes/carrusel1m.png">
-                <img src="Imagenes/carrusel1.png" alt="Nueva Colección">
-            </picture>
+    <section class="carrusel-container">
+        <div class="carrusel-pista">
+            <div class="carrusel-item">
+                <picture>
+                    <source media="(max-width: 768px)" th:srcset="@{/Imagenes/carrusel1m.png}">
+                    <img th:src="@{/Imagenes/carrusel1.png}" alt="Nueva Colección">
+                </picture>
+            </div>
+            <div class="carrusel-item">
+                <picture>
+                    <source media="(max-width: 768px)" th:srcset="@{/Imagenes/carrusel2m.png}">
+                    <img th:src="@{/Imagenes/carrusel2.png}" alt="Descuentos">
+                </picture>
+            </div>
+            <div class="carrusel-item">
+                <picture>
+                    <source media="(max-width: 768px)" th:srcset="@{/Imagenes/carrusel3m.png}">
+                    <img th:src="@{/Ima-genes/carrusel3.png}" alt="Promociones">
+                </picture>
+            </div>
         </div>
-        <div class="carrusel-item">
-            <picture>
-                <source media="(max-width: 768px)" srcset="Imagenes/carrusel2m.png">
-                <img src="Imagenes/carrusel2.png" alt="Descuentos">
-            </picture>
-        </div>
-        <div class="carrusel-item">
-            <picture>
-                <source media="(max-width: 768px)" srcset="Imagenes/carrusel3m.png">
-                <img src="Imagenes/carrusel3.png" alt="Promociones">
-            </picture>
-        </div>
-    </div>
-    <button class="flecha anterior">&#10094;</button>
-    <button class="flecha siguiente">&#10095;</button>
-</section>
-
-<main>
-    <section class="hero">
-        <div class="hero-contenido">
-            <h2 class="hero-titulo">NUEVA COLECCIÓN 2026</h2>
-            <p class="hero-subtitulo">Hasta 40% de descuento en línea</p>
-            <a href="categorias.html" class="hero-boton">COMPRAR AHORA</a>
-        </div>
+        <button class="flecha anterior">&#10094;</button>
+        <button class="flecha siguiente">&#10095;</button>
     </section>
 
-    <h2 class="titulo-seccion">TENDENCIAS DE HOY</h2>
-    <section id="catalogo"></section>
-</main>
+    <main>
+        <section class="hero">
+            <div class="hero-contenido">
+                <h2 class="hero-titulo">NUEVA COLECCIÓN 2026</h2>
+                <p class="hero-subtitulo">Hasta 40% de descuento en línea</p>
+                <a href="#" class="hero-boton">COMPRAR AHORA</a>
+            </div>
+        </section>
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-col">
-            <h4>TE AYUDAMOS</h4>
-            <ul>
-                <li><a href="#">Centro de ayuda</a></li>
-                <li><a href="#">Cambios y devoluciones</a></li>
-                <li><a href="#">Seguimiento de mi orden</a></li>
-                <li><a href="#">Boletas y facturas</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>SOBRE NOSOTROS</h4>
-            <ul>
-                <li><a href="#">Quiénes Somos</a></li>
-                <li><a href="#">Sustentabilidad</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>PROGRAMAS</h4>
-            <ul>
-                <li><a href="#">Historias Sublym</a></li>
-                <li><a href="#">Puntos Sublym (Sublines)</a></li>
-                <li><a href="#">Cyber WOW 2026</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>LEGAL</h4>
-            <ul>
-                <li><a href="#">Términos y condiciones</a></li>
-                <li><a href="#">Política de cookies</a></li>
-                <li><a href="#">Privacidad</a></li>
-            </ul>
-            <div class="redes-sociales">
-                <span>FB</span> | <span>IG</span> | <span>TK</span>
+        <h2 class="titulo-seccion">TENDENCIAS DE HOY</h2>
+        <section id="contenedor-tendencias" class="productos-destacados">
+        </section>
+    </main>
+
+    <div id="modal-auth" class="modal" style="display: none;">
+        <div class="modal-contenido">
+            <span id="btn-cerrar-modal" class="close-btn">&times;</span>
+            
+            <div id="seccion-login">
+                <h2>Iniciar Sesión</h2>
+                <form id="form-login">
+                    <div class="form-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" id="login-correo" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input type="password" id="login-contrasenia" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Ingresar</button>
+                </form>
+                <p class="cambio-auth">¿No tienes cuenta? <span id="link-ir-registro">Regístrate</span></p>
+            </div>
+
+            <div id="seccion-registro" style="display: none;">
+                <h2>Registrarse</h2>
+                <form th:action="@{/auth/registro}" method="POST">
+                    <div class="form-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" name="correo" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input type="password" name="contrasenia" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Crear Cuenta</button>
+                </form>
+                <p class="cambio-auth">¿Ya tienes cuenta? <span id="link-ir-login">Inicia Sesión</span></p>
+            </div>
+
+            <div id="seccion-2fa" style="display: none;">
+                <h2>Autenticación de 2 Pasos</h2>
+                <p>Se ha enviado un código de verificación a su consola del servidor.</p>
+                <form id="form-2fa">
+                    <div class="form-group">
+                        <label>Código de Seguridad (6 dígitos)</label>
+                        <input type="text" id="token-2fa" maxlength="6" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Verificar Código</button>
+                </form>
             </div>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 SUBLYM S.A.C. Todos los derechos reservados.</p>
-        <p>Sector San José, Ica, Perú</p>
-    </div>
-</footer>
 
-<div id="modal-login" class="modal-overlay">
-    <div class="modal-content">
-        <button id="btn-cerrar-modal" class="close-modal-btn">&times;</button>
-        <h2>SUBLYM</h2>
-        <form id="form-login-modal">
-            <div style="margin-bottom: 15px; text-align: left;">
-                <label style="display:block; margin-bottom:5px; font-weight:600; font-size:0.85rem;">Usuario</label>
-                <input type="text" id="modal-username" placeholder="correo" required>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>TE AYUDAMOS</h4>
+                <ul>
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Cambios y devoluciones</a></li>
+                    <li><a href="#">Seguimiento de mi orden</a></li>
+                    <li><a href="#">Boletas y facturas</a></li>
+                </ul>
             </div>
-            <div style="margin-bottom: 20px; text-align: left;">
-                <label style="display:block; margin-bottom:5px; font-weight:600; font-size:0.85rem;">Contraseña</label>
-                <input type="password" id="modal-password" placeholder="contraseña" required>
+            <div class="footer-col">
+                <h4>SOBRE NOSOTROS</h4>
+                <ul>
+                    <li><a href="#">Quiénes Somos</a></li>
+                    <li><a href="#">Sustentabilidad</a></li>
+                </ul>
             </div>
-            <button type="submit" class="btn-ingresar-premium">INGRESAR</button>
-            <p class="texto-registro-modal">
-                ¿No tienes una cuenta? <a href="#" id="link-registrar-simulado" onclick="alert('Todavia no hay eso :V')">Regístrate</a>
-            </p>
-        </form>
-        <p id="modal-error-login" style="color: #ef4444; font-size: 0.85rem; margin-top: 15px; display: none;">Credenciales incorrectas.</p>
-    </div>
-</div>
-
-<script src="script.js"></script>
+            <div class="footer-col">
+                <h4>PROGRAMAS</h4>
+                <ul>
+                    <li><a href="#">Historias Sublym</a></li>
+                    <li><a href="#">Puntos Sublym (Sublines)</a></li>
+                    <li><a href="#">Cyber WOW 2026</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>LEGAL</h4>
+                <ul>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                </ul>
+                <div class="redes-sociales">
+                    <span>FB</span> | <span>IG</span> | <span>TK</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SUBLYM S.A.C. Todos los derechos reservados.</p>
+            <p>Sector San José, Ica, Perú</p>
+        </div>
+    </footer>
 </body>
 </html>
